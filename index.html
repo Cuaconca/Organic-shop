@@ -103,6 +103,7 @@
 
         <!-- Styles CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/modal.css" />
     </head>
     <body>
         <!-- Fixed header -->
@@ -221,6 +222,7 @@
                     <ul class="info">
                         <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/coffee-asorted-300x300.jpg"
                                 alt=""
                                 class="info-img"
@@ -238,6 +240,7 @@
                         </li>
                         <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/sanitizer.jpg"
                                 alt=""
                                 class="info-img"
@@ -255,6 +258,7 @@
                         </li>
                         <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/red-chillies-300x300.jpg"
                                 alt=""
                                 class="info-img"
@@ -270,8 +274,9 @@
                             </div>
                             <p class="info__price">£19.00</p>
                         </li>
-                        <li class="product-sale">
+                        <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/edible-oil-300x300.jpg"
                                 alt=""
                                 class="info-img"
@@ -382,6 +387,7 @@
                     <ul class="info">
                         <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/coffee-asorted-300x300.jpg"
                                 alt=""
                                 class="info-img"
@@ -399,6 +405,7 @@
                         </li>
                         <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/orage-juice-kariz-300x300.jpg"
                                 alt=""
                                 class="info-img"
@@ -416,6 +423,7 @@
                         </li>
                         <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/sanitizer.jpg"
                                 alt=""
                                 class="info-img"
@@ -433,6 +441,7 @@
                         </li>
                         <li>
                             <img
+                                onclick="ShowDetailProducts(event)"
                                 src="./assets/images/products/red-chillies-300x300.jpg"
                                 alt=""
                                 class="info-img"
@@ -674,8 +683,8 @@
                     </div>
                 </div>
             </footer>
-            <!-- Copyright -->
 
+            <!-- Copyright -->
             <div class="copyright">
                 <div class="content">
                     <p class="copyright-pragraph">
@@ -705,4 +714,161 @@
             </div>
         </main>
     </body>
+
+    <a
+        href="#!"
+        class="btn btn-product-detail"
+        onclick="ShowDetailProducts(event)"
+    ></a>
+
+    <!-- Modal -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="modal-content__close">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <div class="modal-wrapper">
+                <img
+                    src="./assets/images/products/coffee-asorted-300x300.jpg"
+                    alt=""
+                    class="modal-content__img"
+                />
+                <div class="modal-wrapper__info">
+                    <h2 class="modal-content__heading">Assorted Coffee</h2>
+                    <p class="modal-content__price">
+                        <span>£35.00</span> + Free Shipping
+                    </p>
+                    <p class="modal-content__desc">
+                        Neque porro quisquam est, qui dolore ipsum quia dolor
+                        sit amet, consectetur adipisci velit, sed quia non
+                        incidunt lores ta porro ame. numquam eius modi tempora
+                        incidunt lores ta porro ame.
+                    </p>
+                    <div class="wrapper">
+                        <input
+                            type="text"
+                            class="modal-content__quantity-input"
+                            placeholder="1"
+                        />
+                        <button class="btn">ADD TO CART</button>
+                    </div>
+                    <p class="modal-content__categories">
+                        Categories: <span class="highlight">Groceries</span>,
+                        <span class="highlight">Juice</span>
+                    </p>
+                </div>
+            </div>
+
+            <footer class="modal-footer">
+                <ul class="modal-footer__direction">
+                    <li>
+                        <a class="active-btn-modal" href="#!">Description</a>
+                    </li>
+                    <li>
+                        <a href="#!">Review(0)</a>
+                    </li>
+                </ul>
+                <p class="modal-footer-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Saepe laborum voluptatem officia aut quam, adipisci aliquam
+                    deleniti non repellat hic ex mollitia illum repudiandae
+                    iste? Unde iste nostrum rerum consequuntur.
+                </p>
+                <h2 class="related-products__heading">Related products</h2>
+                <div class="related-products">
+                    <ul class="info">
+                        <li>
+                            <img
+                                src="./assets/images/products/coffee-asorted-300x300.jpg"
+                                alt=""
+                                class="info-img"
+                            />
+                            <p class="info__desc">Groceries</p>
+                            <h2 class="info__title">Assorted Coffee</h2>
+                            <div class="info__star">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="info__price">£35.00</p>
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/images/products/orage-juice-kariz-300x300.jpg"
+                                alt=""
+                                class="info-img"
+                            />
+                            <p class="info__desc">Groceries</p>
+                            <h2 class="info__title">Hand Sanitizer</h2>
+                            <div class="info__star">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="info__price">£18.00</p>
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/images/products/sanitizer.jpg"
+                                alt=""
+                                class="info-img"
+                            />
+                            <p class="info__desc">Groceries</p>
+                            <h2 class="info__title">Handpicked Red Chillies</h2>
+                            <div class="info__star">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="info__price">£15.00</p>
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/images/products/sanitizer.jpg"
+                                alt=""
+                                class="info-img"
+                            />
+                            <p class="info__desc">Groceries</p>
+                            <h2 class="info__title">Handpicked Red Chillies</h2>
+                            <div class="info__star">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="info__price">£15.00</p>
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/images/products/sanitizer.jpg"
+                                alt=""
+                                class="info-img"
+                            />
+                            <p class="info__desc">Groceries</p>
+                            <h2 class="info__title">Handpicked Red Chillies</h2>
+                            <div class="info__star">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="info__price">£15.00</p>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
 </html>

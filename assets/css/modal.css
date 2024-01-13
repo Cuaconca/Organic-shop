@@ -1,0 +1,217 @@
+
+/* Common */
+
+.active-btn-modal {
+    padding-top: 12px;
+    border-top: 5px solid var(--highlight-color);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    /* overflow: hidden; */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #f8f6f3;
+    border-radius: 10px;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 40px 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    position: relative;
+}
+
+.modal .modal-content__close {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.modal .modal-content__close i {
+    font-size: 3rem;
+    color: var(--highlight-color);
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.modal .modal-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal .modal-wrapper .modal-content__img {
+    min-width: 560px;
+    min-height: 560px;
+}
+
+.modal .modal-wrapper__info {
+    margin-left: 45px;
+}
+
+.modal .modal-content__heading {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+}
+
+.modal .modal-content__price {
+    margin-top: 20px;
+}
+
+.modal .modal-content__price span {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.56rem;
+}
+
+.modal .modal-content__desc {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    line-height: 2.56rem;
+}
+
+.modal .modal-wrapper__info .wrapper {
+    margin-top: 15px;
+}
+
+.modal .modal-wrapper__info .wrapper .modal-content__quantity-input {
+    width: 58px;
+    height: 37px;
+    border: 1px solid rgba(18, 18, 18, 0.2);
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.modal .modal-wrapper__info .wrapper .modal-content__quantity-input:focus {
+    border: none;
+}
+
+.modal .modal-wrapper__info .wrapper .btn {
+    font-size: 1.4rem;
+    font-weight: 600;
+    min-height: 34px;
+    height: 34px;
+    width: 258px;
+    padding: 0;
+    margin-left: 16px;
+    border: none;
+}
+
+.modal .modal-wrapper .modal-content__categories {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #c5c5c5;
+}
+
+/* ===#=== Modal footer ===#=== */
+
+.modal .modal-footer {
+    margin-top: 65px;
+}
+
+
+.modal .modal-footer .modal-footer__direction {
+    border-top: 1px solid #c5c5c5;
+    display: flex;
+    gap: 25px;
+    align-items: flex-end;
+}
+
+.modal .modal-footer .modal-footer__direction a {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.modal .modal-footer .modal-footer-desc {
+    margin-top: 30px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.56rem;
+}
+
+.modal .modal-footer .related-products__heading {
+    margin-top: 60px;
+    font-family: 'Merriweather', serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 4.42rem;
+}
+
+/* =#= Modal footer Related products =#= */
+
+.modal .modal-footer .info {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 20px;
+}
+
+.modal .modal-footer .info-img {
+    width: calc(275px - 15px);
+    height: 275px;
+    object-fit: contain;
+}
+
+.modal .modal-footer li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: ease 0.6s;
+    cursor: pointer;
+}
+
+.modal .modal-footer li:hover {
+    transform: scale(1.05);
+}
+
+.modal .modal-footer .info__desc {
+    margin-top: 10px;
+    font-size: 1.36rem;
+    line-height: 1.768rem;
+    opacity: 0.6;
+}
+
+.modal .modal-footer .info__title {
+    margin-top: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.56rem;
+}
+
+.modal .modal-footer .info__star {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    display: flex;
+}
+
+.modal .modal-footer .info__price {
+    margin-top: 10px;
+    font-size: 1.44rem;
+    font-weight: 700;
+    line-height: 1.872rem;
+}
+
+
+
+
+
