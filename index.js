@@ -12,6 +12,9 @@ var span = document.getElementsByClassName("modal-content__close")[0];
 function ShowDetailProducts(event) {
     modal.style = "display:block";
     html.style = "overflow:hidden";
+    modal.querySelectorAll(".modal-content")[0].style = `display:block`
+    modal.querySelectorAll(".modal-content-login-form")[0].style = `display:none`
+
 
     var e = event.target.parentElement;
     var imgProduct = e.querySelector(".info-img").cloneNode(true);
@@ -85,4 +88,33 @@ window.onclick = function (event) {
         modal.style.display = "none";
         html.style = "overflow:visible";
     }
+
 };
+
+
+
+
+// ====#=== Login Form ===#=== 
+
+function LoginForm() {
+    modal.style = "display:flex";
+    html.style = "overflow:hidden";
+    
+    modal.querySelectorAll(".modal-content")[0].style = `display:none`
+    modal.querySelectorAll(".modal-content-login-form")[0].style = `display:block`
+
+    modal.querySelectorAll(".modal-content-login-form")[0].style = `
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 40px 20px;
+    border: 1px solid #888;
+    width: 35%; /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    position: relative;
+    margin: auto;
+    `;
+    
+}

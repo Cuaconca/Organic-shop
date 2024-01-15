@@ -139,7 +139,7 @@
                 </div>
 
                 <!-- User -->
-                <div class="user">
+                <div class="user" onclick="LoginForm()">
                     <a href="#!"><i class="fa-solid fa-user"></i></a>
                 </div>
             </div>
@@ -715,6 +715,12 @@
         </main>
     </body>
 
+    <a
+        href="#!"
+        class="btn btn-product-detail"
+        onclick="ShowDetailProducts(event)"
+    ></a>
+
     <!-- Modal -->
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -862,6 +868,36 @@
                 </div>
             </footer>
         </div>
+
+        <!-- Login -form -->
+        <div class="modal-content-login-form" style="display: none;">
+            <div class="login-form">
+                <p class="login-form__heading">Sign In</p>
+                <img
+                        src="./assets/images/logo-leaf-new.png"
+                        alt=""
+                        class="login-form__img"
+                    />
+                <div class="login-form__username">
+                    <span><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="login-form__input-username" placeholder="Username">
+                </div>
+                <div class="login-form__password">
+                    <span><i class="fa-solid fa-key"></i></span>
+                    <input type="password" class="login-form__input-password" placeholder="Password">
+                </div>
+                <div class="login-form__checkbox">
+                    <input type="checkbox" class="login-form__input-checkbox">
+                    <span>Remember me</span>
+                    <button class="btn login-form__button">Login</button>
+                </div>
+                <div class="login-form-footer">
+                    <p>Don't have an account? <span>Sign up</span></p>
+                    <span>Forgot your password?</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="./index.js"></script>
