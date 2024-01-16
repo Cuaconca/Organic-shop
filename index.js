@@ -130,7 +130,7 @@ btnShowSidebar.onclick = function (event) {
     sideBar.style = `display: block`;
 };
 
-window.onclick = function (event) {
+sideBar.onclick = function (event) {
     if (event.target == sideBar) {
         sideBar.style = `display: none`;
     }
