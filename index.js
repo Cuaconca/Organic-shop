@@ -119,6 +119,12 @@ function LoginForm() {
     `;
 }
 
+var buttonSignUp = document.getElementById("button-signup")
+
+buttonSignUp.onclick = function(event) {
+    document.querySelector(".login-form__heading").innerText = "Sign up"
+}
+
 // ===#=== Sidebar ===#===
 
 var btnShowSidebar = document.querySelector(".widget-cart");
