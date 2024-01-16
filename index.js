@@ -146,6 +146,7 @@ btnCheckOut.onclick = function (event) {
     sideBar.style = `display: none`;
 
     modal.style = "display:block";
+    document.querySelector(".modal-content-login-form").style = `display:none`;
     checkoutForm.style = `display:block`;
     html.style = `overflow: hidden`;
 };
