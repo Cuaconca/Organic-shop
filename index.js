@@ -5,6 +5,8 @@ var html = document.querySelector("html");
 // Get the modal
 var modal = document.getElementById("myModal");
 
+var modalContent = document.querySelector(".modal-content");
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modal-content__close")[0];
 
@@ -12,9 +14,10 @@ var span = document.getElementsByClassName("modal-content__close")[0];
 function ShowDetailProducts(event) {
     modal.style = "display:block";
     html.style = "overflow:hidden";
-    modal.querySelectorAll(".modal-content")[0].style = `display:block`
-    modal.querySelectorAll(".modal-content-login-form")[0].style = `display:none`
-
+    modal.querySelectorAll(".modal-content")[0].style = `display:block`;
+    modal.querySelectorAll(
+        ".modal-content-login-form"
+    )[0].style = `display:none`;
 
     var e = event.target.parentElement;
     var imgProduct = e.querySelector(".info-img").cloneNode(true);
@@ -29,12 +32,11 @@ function ShowDetailProducts(event) {
     var priceProduct = e.querySelector(".info__price").cloneNode(true);
     priceProduct = `<p class="modal-content__price">
     <span>${priceProduct.innerHTML}</span> + Free Shipping
-    </p>`
+    </p>`;
 
     const parser = new DOMParser();
-    let doc = parser.parseFromString(priceProduct, 'text/html');
-    priceProduct = doc.body.childNodes[0]
-    
+    let doc = parser.parseFromString(priceProduct, "text/html");
+    priceProduct = doc.body.childNodes[0];
 
     // Replace image
     modal
@@ -86,22 +88,21 @@ span.onclick = function () {
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        // modalContent.style = `display: none`;
         html.style = "overflow:visible";
     }
-
 };
 
-
-
-
-// ====#=== Login Form ===#=== 
+// ====#=== Login Form ===#===
 
 function LoginForm() {
     modal.style = "display:flex";
     html.style = "overflow:hidden";
-    
-    modal.querySelectorAll(".modal-content")[0].style = `display:none`
-    modal.querySelectorAll(".modal-content-login-form")[0].style = `display:block`
+
+    modal.querySelectorAll(".modal-content")[0].style = `display:none`;
+    modal.querySelectorAll(
+        ".modal-content-login-form"
+    )[0].style = `display:block`;
 
     modal.querySelectorAll(".modal-content-login-form")[0].style = `
     background-color: rgba(255, 255, 255, 0.8);
@@ -116,5 +117,45 @@ function LoginForm() {
     position: relative;
     margin: auto;
     `;
-    
 }
+
+// ===#=== Sidebar ===#===
+
+var btnShowSidebar = document.querySelector(".widget-cart");
+
+var sideBar = document.querySelector(".sidebar");
+var sideBarContainer = sideBar.querySelector(".container");
+
+btnShowSidebar.onclick = function (event) {
+    sideBar.style = `display: block`;
+};
+
+window.onclick = function (event) {
+    if (event.target == sideBar) {
+        sideBar.style = `display: none`;
+    }
+};
+
+// ===#=== Check out ===#===
+
+var btnCheckOut = document.getElementById("button-checkout");
+
+var checkoutForm = document.querySelector(".modal-content-checkout-form");
+
+btnCheckOut.onclick = function (event) {
+    sideBar.style = `display: none`;
+
+    modal.style = "display:block";
+    checkoutForm.style = `display:block`;
+    html.style = `overflow: hidden`;
+};
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style = `display: none`;
+
+        modalContent.style = `display: none`;
+        checkoutForm.style = `display: none`;
+        html.style = `overflow: auto`;
+    }
+};
